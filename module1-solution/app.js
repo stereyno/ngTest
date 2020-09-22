@@ -11,9 +11,6 @@ LunchCheckController.$inject = ['$scope'];
 function LunchCheckController($scope){
 
 
-
-
-
     $scope.foodCount = function () {
 
       if (($scope.items === undefined) || (!$scope.items.replace(/\s/g, ''))){
