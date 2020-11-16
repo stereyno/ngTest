@@ -38,7 +38,7 @@
                     menu.message = '';
                     menu.found = items;
                 } else {
-                    menu.message = 'Nothing found!';
+                    menu.message = 'Nothing found';
                     menu.found = [];
                 }
             });
@@ -57,7 +57,10 @@
         service.getMatchedMenuItems = function(searchTerm) {
             return $http({
                 method: "GET",
-                url: (ApiBasePath + "/menu_items.json")
+                url: (ApiBasePath + "/menu_items.json"),
+                params: {
+                  category: shortName
+                }
             }).then(function(response) {
                 var foundItems = [];
 
