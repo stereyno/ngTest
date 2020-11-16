@@ -28,8 +28,6 @@ function ToBuyController(ShoppingListCheckOffService) {
 
 
 
-
-
 };
 
 
@@ -40,6 +38,7 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
 
     var bought = this;
 
+    //SHOW BOUGHT ITEMS
     bought.items = ShoppingListCheckOffService.getBoughtList();
 
 
